@@ -5,16 +5,6 @@
 
 trigger:
 - main
-
-pool:
-- task: Docker@2
-  inputs:
-    containerRegistry: 'Testofregistry-1527'
-    repository: 'New Repo'
-    command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
-  vmImage: ubuntu-latest
-
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
